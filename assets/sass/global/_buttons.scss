@@ -1,0 +1,93 @@
+$color-darker: 60%;
+$btn-primary: $primary;
+$btn-secondary: $secondary;
+$btn-success: $success;
+$btn-info: $info;
+$btn-warning: $warning;
+$btn-danger: $danger;
+$btn-padding: .75rem 2rem;
+.dev-btn {
+  display: inline-flex;
+  font-size: $font-size-base;
+  text-align: center;
+  line-height: 1;
+  text-decoration: none;
+  padding: $btn-padding;
+  cursor: pointer;
+  border-radius: $border-radius-btn;
+  transition: all $trs-2;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.dev-btn-primary {
+  color: $white !important;
+  background-color: $btn-primary;
+  &:hover {
+    color: $white;
+    background-color: darken($btn-primary, $emphasized-link-hover-darken-percentage);
+  }
+}
+
+.dev-btn-secondary {
+  color: $white !important;
+  background-color: $btn-secondary;
+  &:hover {
+    background-color: darken($btn-secondary, $emphasized-link-hover-darken-percentage);
+    color: $white;
+  }
+}
+
+.dev-btn-success {
+  color: darken($btn-success, $color-darker) !important;
+  background-color: $btn-success;
+  &:hover {
+    color: darken($btn-success, $color-darker + $emphasized-link-hover-darken-percentage);
+    background-color: darken($btn-success, $emphasized-link-hover-darken-percentage);
+  }
+}
+
+.dev-btn-info {
+  color: darken($btn-info, $color-darker) !important;
+  background-color: $btn-info;
+  &:hover {
+    color: darken($btn-info, $color-darker + $emphasized-link-hover-darken-percentage);
+    background-color: darken($btn-info, $emphasized-link-hover-darken-percentage);
+  }
+}
+
+.dev-btn-warning {
+  color: darken($btn-warning, $color-darker) !important;
+  background-color: $btn-warning;
+  &:hover {
+    color: darken($btn-warning, $color-darker + $emphasized-link-hover-darken-percentage);
+    background-color: darken($btn-warning, $emphasized-link-hover-darken-percentage);
+  }
+}
+
+.dev-btn-danger {
+  color: darken($btn-danger, $color-darker) !important;
+  background-color: $btn-danger;
+  &:hover {
+    color: darken($btn-danger, $color-darker + $emphasized-link-hover-darken-percentage);
+    background-color: darken($btn-danger, $emphasized-link-hover-darken-percentage);
+  }
+}
+
+.dev-btn-submit {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  input {
+    background-color: rgba($white, 0);
+    font-size: inherit;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    line-height: inherit;
+    border: none;
+    @extend .dev-btn;
+  }
+}
+
